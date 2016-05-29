@@ -20,3 +20,5 @@ gem "builder", "~> 3.0"
 
 gem 'slim'
 gem 'html2slim'
+
+gem 'sass'

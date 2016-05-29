@@ -138,6 +138,7 @@ DEPENDENCIES
   middleman-blog
   middleman-livereload
   redcarpet (~> 3.3, >= 3.3.3)
+  sass
   slim
   tzinfo-data
   wdm (~> 0.1.0)
