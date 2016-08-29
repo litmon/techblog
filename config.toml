@@ -1,5 +1,16 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "ja"
-title = "もんのTech Blog"
+title = "もんの技術実験場"
 
 theme = "hugo-theme-geppaku"
+
+[author]
+  name = "Fukuo Kadota"
+  twitter = "https://twitter.com/_litmon_"
+  facebook = "https://www.facebook.com/fukuo.kadota"
+  github = "https://github.com/litmon"
+
+[params]
+  [params.sharebutton]
+    twitter = true
+    facebook = true
