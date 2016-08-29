@@ -3,7 +3,7 @@ build:
   steps:
     - arjen/hugo-build:
       version: 0.14
-      theme: custom
+      theme: hugo-theme-geppaku
       flags: --buildDrafts=true
 deploy:
   steps:
