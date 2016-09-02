@@ -1,14 +1,15 @@
 box: debian
 build:
-    steps:
-        - arjen/hugo-build@1.0.2:
-            theme: hugo-theme-geppaku
-            flags: --buildDrafts=true
+  steps:
+    - arjen/hugo-build@1.0.2:
+      theme: hugo-theme-geppaku
+      flags: --buildDrafts=true
 deploy:
-    steps:
-        - lukevivier/gh-pages@0.2.1:
-            token: $GITHUB_TOKEN
-            basedir: public
-            repo: litmon/techblog
-            domain: litmon.github.io/techblog
+  steps:
+    - install-packages:
+      packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+      token: $GITHUB_TOKEN
+      domain: litmon.github.io/techblog
+      basedir: public
 
