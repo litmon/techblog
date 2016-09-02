@@ -10,4 +10,5 @@ deploy:
             token: $GITHUB_TOKEN
             basedir: public
             repo: litmon/techblog
+            domain: litmon.github.io/techblog
 
