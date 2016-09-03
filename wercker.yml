@@ -11,6 +11,11 @@ build:
       version: 0.14
       theme: hugo-theme-geppaku
       flags: --buildDrafts=true
+    - script:
+      name: replace style file path
+      code: |
+        find public -name "*.html" -exec sed -i -e "s/\/css\/style.css/\/techblog\/css\/style.css/g" {} \;       
+        find public -name "*.html-e" -exec rm {} \;
 deploy:
   steps:
     - install-packages:
