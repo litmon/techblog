@@ -6,9 +6,9 @@ theme = "hugo-theme-geppaku"
 
 [author]
   name = "Fukuo Kadota"
-  twitter = "https://twitter.com/_litmon_"
-  facebook = "https://www.facebook.com/fukuo.kadota"
-  github = "https://github.com/litmon"
+  twitter = "_litmon_"
+  facebook = "fukuo.kadota"
+  github = "litmon"
 
 [params]
   [params.sharebutton]
