@@ -10,7 +10,6 @@ build:
     - arjen/hugo-build:
       version: 0.14
       theme: hugo-theme-geppaku
-      flags: --buildDrafts=true
     - script:
       name: replace style file path
       code: |
