@@ -22,4 +22,12 @@ deploy:
     - lukevivier/gh-pages@0.2.1:
       token: $GITHUB_TOKEN
       basedir: public
+check-deploy-build:
+  steps:
+    - install-packages:
+      packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+      branch: wercker-build
+      token: $GITHUB_TOKEN
+      basedir: public
 
