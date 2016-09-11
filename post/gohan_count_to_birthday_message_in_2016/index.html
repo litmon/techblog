@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="Hugo 0.16" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    
+    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="もんの技術実験場" />
+    <link href="/index.xml" rel="feed" type="application/rss+xml" title="もんの技術実験場" />
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+    
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" type="text/css" href="/techblog/css/style.css">
+    <title>誕生日おめでとうコメントの後に何回ごはんについて書かれているか数えてみた | もんの技術実験場</title>
+  </head>
+  <body>
+    <div id="wrap">
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-83669194-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+      <header class="site-header">
+        <div class="site-header-left">
+          <a class="site-header-title" href="http://litmon.github.io/techblog">もんの技術実験場</a>
+        </div>
+      </header>
+      <div class="container">
+        <div id="main">
+
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>誕生日おめでとうコメントの後に何回ごはんについて書かれているか数えてみた</h1>
+      <div class="article-meta">
+        <span class="posttime">2016/09/04</span>
+        
+
+      </div>
+    </div>
+    
+<div id="share-buttons">
+  <ul>
+    
+    <li>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="_litmon_">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+  </header>
+  <div class="content">
+    
+
+<p>初投稿です。</p>
+
+<p>誕生日、いいですよね。好きです、誕生日。
+一年に一回、無条件で色んな人からおめでとうと祝ってもらえる誕生日は、とてもいい日だと思います。</p>
+
+<blockquote>
+<p>誕生日おめでとうございます！ご飯行きましょう！</p>
+</blockquote>
+
+<p>こんな風に。</p>
+
+<p>さて、今年もたくさん祝ってもらえたので、そんな誕生日のメッセージを眺めていくと、ふと気付いたことがありました。</p>
+
+<blockquote>
+<p>誕生日おめっとさーん！またご飯いきましょ！</p>
+
+<p>誕生日おめでとう！！またご飯とかとかいきましょい！！</p>
+
+<p>もんちゃん誕生日おめでと！またメシ行こー</p>
+</blockquote>
+
+<p>……んん？</p>
+
+<p>なんだか、「ごはん」関連のワードが多い気がする……。</p>
+
+<p>ということで、誕生日のコメントに「ごはん」関連の話題が何回くらい出ているのか気になったので、調査してみました。</p>
+
+<h3 id="調査を開始">調査を開始</h3>
+
+<p>さて、誕生日のコメントは、私が普段使っているFacebook, Twitterの2つのSNSに多かったため、この2つを調査していきたいと思います。</p>
+
+<p>調査の内容は、大きく分けて3つ。</p>
+
+<ul>
+<li>2016年のお祝いコメントの数</li>
+<li>「ごはん」関連のコメントの数と、全体のうちの何％か</li>
+<li>去年とくらべてどれくらいだったのか</li>
+</ul>
+
+<p>今年の誕生日コメントは、2016年9月1日から9月3日までのものを調査しました。</p>
+
+<h4 id="調査方法">調査方法</h4>
+
+<p>やっぱり、まごころを込めて1つずつ数えていくのもいいかなと思ったのですが、少し数が多くて大変そうな気持ちになったので、プログラマらしく簡単にプログラムを書いて集計しました。</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/6662768/18249318/7f48a074-73b8-11e6-8915-e04933bbb937.png" alt="" /></p>
+
+<p>実装はかなり単純で、Facebookのメッセージ欄のHTMLをコピーして手元のファイルに貼り付けて、それをそのままRubyを使ってスクレイピングで解析、って感じです。</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/6662768/18249317/7f469f90-73b8-11e6-988a-96faf09139f2.png" alt="" /></p>
+
+<p>Nokogiri、こういうときにさくっと使えると便利ですね。</p>
+
+<p>「ごはん」関連のメッセージかどうかは、これまたすごく単純に目についた「ごはん」「めし」あたりの単語が含まれるかどうかを調査しました。</p>
+
+<h3 id="調査結果">調査結果</h3>
+
+<p>そんな感じで、調査した結果はだいたいこんな感じです。</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/6662768/18227981/1eded4ec-7273-11e6-84bf-fb711870a1e1.png" alt="" /></p>
+
+<p>Facebook, Facebook Messanger, Twitterの3日間の総計で、83のメッセージをいただいていました。
+みなさま、改めてこの場をお借りしてお礼申し上げます。本当にありがとうございます！すごく嬉しかったです。</p>
+
+<p>さて、気になる「ごはん」メッセージの数は・・・</p>
+
+<p><strong>12件</strong> (<strong>14.5%</strong>)</p>
+
+<p>・・・・・・</p>
+
+<p>意外と、多くないのかな・・・？</p>
+
+<p>ということで、2015年、つまり去年の数字を見てみましょう。</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/6662768/18227988/35217a5c-7273-11e6-928a-55c0e0b53d6d.png" alt="" /></p>
+
+<p>(Messengerは遡るのが大変だったので省きました)</p>
+
+<p>おお、去年と総数はあんまり変わっていないですね。</p>
+
+<p>去年はキャンプの直後ということもあって結構多くの人にもらってた印象だったんですが、今年も負けじとたくさんのコメントをいただけていたようです。ありがたい。</p>
+
+<p>「ごはん」メッセージの数は・・・ <strong>1件</strong>（<strong>1.2％</strong>）</p>
+
+<p>・・・・・・</p>
+
+<p>・・・・・</p>
+
+<p>・・・</p>
+
+<p>・</p>
+
+<p>全然今年と違うやん！！！！</p>
+
+<p>やっぱり今年はめちゃめちゃ多かったんだ！私の仮説は正しかった！！</p>
+
+<h3 id="考察">考察</h3>
+
+<p>この4ヶ月、会社に入ってから色んな人とご飯に行きまくっていました。</p>
+
+<p>恵比寿に住み始めて、フットワークが軽くなったのもありそうです。</p>
+
+<p>ツイッターでご飯についてばっかり言っていたのも原因のひとつかもしれません。</p>
+
+<p>どんだけごはん好きなんだ、私は。</p>
+
+<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">こう、ふと仕事終わりとかに友だちに誘われてふらっとご飯食べに行ったりするのすごい好きだから、もっと色んなイベントに誘ってもらいたいっていう気持ちを深夜に吐露して寝る。おやすみなさい。</p>&mdash; もん＠ベッド欲しい (@<em>litmon</em>) <a href="https://twitter.com/_litmon_/status/769213280015355904">2016年8月26日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>大好きです。</p>
+
+<h3 id="結論">結論</h3>
+
+<p>みんなと食べるごはんはとても楽しいので大好きです。なのでみなさんご飯行きましょう！！！</p>
+
+  </div>
+  <footer>
+    <div class="article-footer">
+      
+
+      
+      
+<div id="share-buttons">
+  <ul>
+    
+    <li>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="_litmon_">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+      
+      
+    </div>
+  </footer>
+</div>
+        </div>
+        <div class="sidebar">
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Author</span>
+    </div>
+    <div id="author">
+      <span>Fukuo Kadota</span>
+      <div>
+        
+        <a href="https://twitter.com/_litmon_"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+        <a href="https://github.com/litmon"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Categories</span>
+    </div>
+    <div class="categories">
+      <ul>
+        
+        <li>
+          <a href="/categories/%E3%81%8F%E3%81%A0%E3%82%89%E3%81%AA%E3%81%84%E3%83%8D%E3%82%BF"><span></span>くだらないネタ (1)</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>RSS</span>
+    </div>
+    <div id="rss">
+      <a href="/index.xml" type="application/rss+xml" target="_blank">
+        <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <footer>
+        <div id="site-footer-wrap">
+          <div id="site-footer">
+            <span>Powered by <a href="https://gohugo.io/">Hugo</a>.</span>
+            <span>
+              
+              Copyright (c) 2016, <a href="http://litmon.github.io/techblog">もんの技術実験場</a>
+              
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
