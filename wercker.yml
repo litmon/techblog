@@ -26,8 +26,8 @@ check-deploy-build:
   steps:
     - install-packages:
       packages: git ssh-client
-    - lukevivier/gh-pages@0.2.4:
+    - leipert/git-push@0.7.6
+      gh_oauth: $GITHUB_TOKEN
       branch: wercker-build
-      token: $GITHUB_TOKEN
       basedir: public
 
