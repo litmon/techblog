@@ -8,8 +8,7 @@ build:
       code: |
         git submodule update --init --recursive
     - arjen/hugo-build:
-      version: 0.14
-      theme: hugo-theme-geppaku
+      version: 0.16
     - script:
       name: replace style file path
       code: |
