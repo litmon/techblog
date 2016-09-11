@@ -26,7 +26,7 @@ check-deploy-build:
   steps:
     - install-packages:
       packages: git ssh-client
-    - leipert/git-push@0.7.6
+    - leipert/git-push@0.7.6:
       gh_oauth: $GITHUB_TOKEN
       branch: wercker-build
       basedir: public
